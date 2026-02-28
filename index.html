@@ -10,7 +10,7 @@
     model-viewer {
       width: 100%;
       height: 100vh;
-      background-color: transparent; /* ★背景を透過に */
+      background-color: transparent;
     }
   </style>
 </head>
@@ -18,10 +18,12 @@
   <model-viewer
     alt="ARキャラクター"
     src="untitled.glb"
-    ar
+    scale="0.5 0.5 0.5"                ar
     ar-modes="scene-viewer webxr quick-look"
     shadow-intensity="1"
     camera-controls
+    interaction-prompt="auto"
+    interaction-policy="allow-when-focused"
     touch-action="pan-y">
   </model-viewer>
 </body>
