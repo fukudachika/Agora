@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR診断</title>
+  <title>AR体験</title>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
   <style>
     body { margin: 0; }
@@ -12,43 +12,16 @@
       height: 100vh;
       background-color: #eee;
     }
-    #error-display {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: red;
-      font-size: 24px;
-      text-align: center;
-      background: white;
-      padding: 20px;
-      border: 2px solid red;
-      display: none;
-    }
   </style>
 </head>
 <body>
-  <div id="error-display">エラーが発生しました</div>
   <model-viewer
-    id="model"
     alt="ARキャラクター"
     src="https://drive.google.com/file/d/1kY4_C_thW6-45i_nYopYP7lS9huuFsmW/view?usp=sharing&export=download"
     ar
     ar-modes="webxr scene-viewer quick-look"
     shadow-intensity="1"
     camera-controls
-    touch-action="pan-y">
-  </model-viewer>
-
-  <script>
-    const modelViewer = document.getElementById('model');
-    const errorDisplay = document.getElementById('error-display');
-    
-    modelViewer.addEventListener('error', (event) => {
-      errorDisplay.style.display = 'block';
-      errorDisplay.innerText = 'エラー：キャラクターを読み込めません。\n' + event.detail.detail;
-      console.error(event);
-    });
-  </script>
+    touch-action="pan-y"> </model-viewer>
 </body>
 </html>
