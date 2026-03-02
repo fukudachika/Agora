@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お守りAR体験 - 緑</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <style>
+    body { margin: 0; }
+    model-viewer {
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    alt="お守りキャラクター 緑"
+    src="green.glb"
+    scale="0.1 0.1 0.1"
+    camera-target="0m 0.5m 0m"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    shadow-intensity="1"
+    camera-controls
+    interaction-prompt="auto"
+    interaction-policy="allow-when-focused"
+    touch-action="pan-y">
+  </model-viewer>
+</body>
+</html>
