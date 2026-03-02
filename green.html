@@ -10,19 +10,21 @@
     model-viewer {
       width: 100%;
       height: 100vh;
-      background-color: #f0f0f0; /* 背景を少しグレーにして見やすくしました */
+      background-color: #f0f0f0;
     }
   </style>
 </head>
 <body>
   <model-viewer
     alt="お守りキャラクター 緑"
-    
     src="Green.glb"
     
-    scale="0.5 0.5 0.5"
+    scale="1 1 1"
     camera-target="0m 0m 0m"
-    camera-orbit="0deg 90deg auto"
+    camera-orbit="0deg 0deg 2m"
+    min-camera-orbit="auto auto 1m"
+    max-camera-orbit="auto auto 10m"
+    
     ar
     ar-modes="scene-viewer webxr quick-look"
     shadow-intensity="1"
